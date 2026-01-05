@@ -17,7 +17,7 @@ session = cnx.session()
 
 name_on_order = st.text_input("Name on Smoothie:")
 
-my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'),select(col('SEARCH_ON'))
+my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME')),select(col('SEARCH_ON'))
 
 pd_df = my_dataframe.to_pandas()
                                                                       
